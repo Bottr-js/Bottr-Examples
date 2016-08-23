@@ -1,0 +1,19 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "Examples for the Botkit.js Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BotKit-js/examples.git"
+  },
+  "author": "jcampbell_05",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BotKit-js/examples/issues"
+  },
+  "homepage": "https://github.com/BotKit-js/examples#readme"
+}
