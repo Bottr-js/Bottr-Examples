@@ -1,1 +1,1 @@
-require('EchoBot/index.js') // Start EchoBot Example
+require('./EchoBot/index.js') // Start EchoBot Example
