@@ -31,6 +31,7 @@ var timetable = [
   }
 ]
 
+// Add more course queries "next train to London"
 bot.hears([/timetable/], ['message_received'], function(bot, utterance, context) {
 
   var rows = timetable.map(function(item){
@@ -42,10 +43,12 @@ bot.hears([/timetable/], ['message_received'], function(bot, utterance, context)
   bot.reply(rows.join("\n"));
 });
 
-// Build utterance table of thanks you
-bot.hears([/thanks/], ['message_received'], function(bot, utterance, context) {
+// Put into array
+bot.hears([/thanks/, /cheers/, /thank you/, /ta/, /thx/, /ty/], ['message_received'], function(bot, utterance, context) {
   bot.reply("No problem!")
 });
+
+// Sentiment analysis for aggresive responses
 
 // Hook up to twitter
 bot.spawn()
