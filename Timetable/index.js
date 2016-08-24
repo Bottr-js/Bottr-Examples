@@ -32,6 +32,7 @@ var timetable = [
 ]
 
 // Add more corse queries "next train to London"
+// Replace with wit.ai for proper parsing
 bot.hears([/timetable/], ['message_received'], function(bot, utterance, context) {
 
   var rows = timetable.map(function(item){
