@@ -1,8 +1,11 @@
 var Pozi = require('pozi')
-var bot = new Pozi.Bot();
+var bot = new Pozi.Bot({
+   json_file_store: './data'
+});
 
 // Add Middleware to Pozi
 bot.middleware.receive.use(function(bot, utterance, context, next) {
+
     // Default values for if this is the first time
     // communicating with the bot
     var defaults = {
@@ -42,6 +45,7 @@ bot.hears(['\/stats'], ['message_received'], function(bot, utterance, context) {
 });
 
 bot.hears([/.+/], ['message_received'], function(bot, utterance, context) {
+  // Repeat what the user sent us
   bot.reply(utterance.text);
 });
 
