@@ -49,6 +49,7 @@ bot.hears([/thanks/, /cheers/, /thank you/, /ta/, /thx/, /ty/], ['message_receiv
 });
 
 // Sentiment analysis for aggresive responses
+// Build components for certain responses
 
 // Hook up to twitter
 bot.spawn()
