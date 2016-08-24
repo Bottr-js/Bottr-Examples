@@ -53,5 +53,6 @@ bot.hears([/thanks/, /cheers/, /thank you/, /ta/, /thx/, /ty/], ['message_receiv
 
 // Hook up to twitter
 bot.spawn({
-  client: 'twitter'
+  client: 'twitter',
+  name: 'TrainTimesBot'
 })
