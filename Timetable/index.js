@@ -52,4 +52,6 @@ bot.hears([/thanks/, /cheers/, /thank you/, /ta/, /thx/, /ty/], ['message_receiv
 // Build components for certain responses
 
 // Hook up to twitter
-bot.spawn()
+bot.spawn({
+  client: 'twitter'
+})
