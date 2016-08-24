@@ -46,7 +46,7 @@ bot.hears(['\/stats'], ['message_received'], function(bot, utterance, context) {
 
 bot.hears([/.+/], ['message_received'], function(bot, utterance, context) {
   // Repeat what the user sent us
-  bot.reply(utterance.text);
+  bot.send(utterance.text);
 });
 
 bot.spawn({
