@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/BotKit-js/examples#readme",
   "dependencies": {
-    "pozi": "^0.1.6",
+    "hubot": "^2.19.0",
     "hubot-messenger-bot": "^1.0.1",
-    "hubot": "^2.19.0"
+    "hubot-twitter": "^2.1.1",
+    "pozi": "^0.1.6"
   }
 }
