@@ -1,2 +1,2 @@
 # examples
-Examples for the Botkit.js Framework
+Examples for the Pozi Bot Framework
