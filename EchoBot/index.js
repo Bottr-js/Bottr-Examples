@@ -50,5 +50,5 @@ bot.hears([/.+/], ['message_received'], function(bot, utterance, context) {
 });
 
 bot.spawn({
-  client: 'messenger-bot'
+  client:'messenger-bot'
 })
