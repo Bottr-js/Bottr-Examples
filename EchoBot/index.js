@@ -37,16 +37,16 @@ bot.middleware.receive.use(function(bot, utterance, context, next) {
 bot.hears(['\/stats'], ['message_received'], function(bot, utterance, context) {
     // Send the total number of messages to the
     // user
-    bot.send("Total Message Count: " + context.user.messageCount)
+    bot.reply("Total Message Count: " + context.user.messageCount)
 
     // Send the total number of words to the
     // user
-    bot.send("Total Word Count: " + context.user.wordCount)
+    bot.reply("Total Word Count: " + context.user.wordCount)
 });
 
 bot.hears([/.+/], ['message_received'], function(bot, utterance, context) {
   // Repeat what the user sent us
-  bot.send(utterance.text);
+  bot.reply(utterance.text);
 });
 
 bot.spawn({
