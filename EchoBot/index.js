@@ -49,4 +49,6 @@ bot.hears([/.+/], ['message_received'], function(bot, utterance, context) {
   bot.reply(utterance.text);
 });
 
-bot.spawn()
+bot.spawn({
+  client: 'messenger-bot'
+})

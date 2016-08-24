@@ -9,6 +9,7 @@
   "author": "jcampbell_05",
   "license": "ISC",
   "dependencies": {
-    "botkit": "^0.2.2"
+    "botkit": "^0.2.2",
+    "hubot-messenger-bot": "^1.0.1"
   }
 }
