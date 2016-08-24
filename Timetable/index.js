@@ -31,7 +31,7 @@ var timetable = [
   }
 ]
 
-// Add more course queries "next train to London"
+// Add more corse queries "next train to London"
 bot.hears([/timetable/], ['message_received'], function(bot, utterance, context) {
 
   var rows = timetable.map(function(item){
