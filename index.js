@@ -1,2 +1,3 @@
 console.log("Examples is listening on PORT " +process.env.PORT)
-require('./EchoBot/index.js') // Start EchoBot Example
+//require('./EchoBot/index.js') // Start EchoBot Example
+require('./Timetable/index.js') // Start Timetable Example
