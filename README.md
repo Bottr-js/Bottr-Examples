@@ -7,4 +7,4 @@ Examples for the Pozi Bot Framework
 | **Eliza** - Port of the original Eliza BASIC program but for Skype |  [Source](Eliza) | [Link](#) |
 | **Scrabble Dictionary** - Replies to texts with words the user can make out of the letters they have |  [Source](ScrabbleDictionary) | [Link](#) |
 | **Train Timetable** - Replies to tweets with information about the UK Train Timetable |  [Source](TrainTimetable) | [Link](https://www.twitter.com/TrainTimesBot) |
-| **Reminders** - Allows the user to remind themselves to reply to things (Via email?) |  [Source](#) | [Link](#) |
+| **FAQ** - Replies to common questions from a user via a web interface |  [Source](#) | [Link](#) |
