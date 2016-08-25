@@ -31,8 +31,6 @@ var timetable = [
   }
 ]
 
-// Add more corse queries "next train to London"
-// Replace with wit.ai for proper parsing
 bot.hears([/timetable/], ['message_received'], function(bot, utterance, context) {
 
   var rows = timetable.map(function(item){
@@ -48,9 +46,6 @@ bot.hears([/timetable/], ['message_received'], function(bot, utterance, context)
 bot.hears([/thanks/, /cheers/, /thank you/, /ta/, /thx/, /ty/], ['message_received'], function(bot, utterance, context) {
   bot.reply("No problem!")
 });
-
-// Sentiment analysis for aggresive responses
-// Build components for certain responses
 
 // Hook up to twitter
 bot.spawn({
