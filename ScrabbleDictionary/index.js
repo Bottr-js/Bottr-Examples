@@ -28,7 +28,6 @@ bot.on(['message_received'], function(bot, utterance) {
   bot.reply(utterance.message.user, words.join(", "))
 });
 
-// Wire up to twillio
 bot.spawn({
-  client: 'twilio'
+  client:'messenger-bot'
 })
