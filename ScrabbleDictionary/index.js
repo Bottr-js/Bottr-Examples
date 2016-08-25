@@ -29,4 +29,6 @@ bot.on(['message_received'], function(bot, utterance) {
 });
 
 // Wire up to twillio
-bot.spawn()
+bot.spawn({
+  client: 'twilio'
+})
