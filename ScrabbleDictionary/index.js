@@ -1,7 +1,5 @@
 var Pozi = require('pozi')
-var bot = new Pozi.Bot({
-   json_file_store: './data'
-});
+var bot = new Pozi.Bot();
 
 // Find CSV Dictionary
 var dictionary = [
