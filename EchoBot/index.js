@@ -3,7 +3,7 @@ var bot = new Pozi.Bot({
    json_file_store: './data'
 });
 
-// Add Middleware to Pozi
+// Middleware to handle updating statistics when we get a new message
 bot.middleware.receive.use(function(bot, utterance, context, next) {
 
     // Default values for if this is the first time
@@ -34,6 +34,7 @@ bot.middleware.receive.use(function(bot, utterance, context, next) {
     next();
 });
 
+// When the user sends "/stats"
 bot.hears(['\/stats'], ['message_received'], function(bot, utterance, context) {
     // Send the total number of messages to the
     // user
@@ -44,11 +45,13 @@ bot.hears(['\/stats'], ['message_received'], function(bot, utterance, context) {
     bot.reply("Total Word Count: " + context.user.wordCount)
 });
 
+// When the user sends anything
 bot.hears([/.+/], ['message_received'], function(bot, utterance, context) {
   // Repeat what the user sent us
   bot.reply(utterance.text);
 });
 
+// Spawn a bot which listens for messages via Facebook Messenger
 bot.spawn({
   client:'messenger-bot'
 })
