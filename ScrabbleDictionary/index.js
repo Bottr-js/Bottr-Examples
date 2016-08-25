@@ -1,7 +1,7 @@
 var Pozi = require('pozi')
 var bot = new Pozi.Bot();
 
-// Find CSV Dictionary
+// Find CSV Dictionary Of Words
 var dictionary = [
   "sat",
   "hat",
