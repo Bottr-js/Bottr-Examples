@@ -24,7 +24,6 @@ bot.on(['message_received'], function(bot, utterance) {
 
   words = words.slice(0, Math.min(30, words.length - 1))
 
-console.log(utterance)
   bot.reply(utterance.message.user, "You can make these words with the letters: " + letters.join(" "))
   bot.reply(utterance.message.user, words.join(", "))
 });
