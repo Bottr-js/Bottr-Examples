@@ -1,5 +1,8 @@
 var Pozi = require('pozi')
 var bot = new Pozi.Bot();
+
+// - Use Twitter
+
 //
 // // TODO: Replace with real data
 // var timetable = [
