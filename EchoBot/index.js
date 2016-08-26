@@ -38,4 +38,4 @@ bot.hears(/.+/, function(message, session) {
   session.send(message.text)
 })
 
-bot.listen(process.env.PORT || 3000)
+Pozi.startBot(bot, process.env.PORT || 3000)
