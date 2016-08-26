@@ -1,57 +1,40 @@
 var Pozi = require('pozi')
-var bot = new Pozi.Bot({
-   json_file_store: './data'
-});
+var bot = new Pozi.Bot()
 
-// Middleware to handle updating statistics when we get a new message
-bot.middleware.receive.use(function(bot, utterance, context, next) {
+bot.use(new Pozi.WebhookClient())
+bot.use(new Pozi.MemoryStorage())
 
-    // Default values for if this is the first time
-    // communicating with the bot
-    var defaults = {
-      messageCount: 0,
-      wordCount: 0
-    }
+bot.on('message_received', function(message, session, next) {
 
-    // Merge current context with the defaults.
-    context.user = Object.assign(defaults, context.user)
-    var text = utterance.text
+  var defaults = {
+    totalMessages: 0,
+    totalWords: 0
+  }
 
-    // Increment the message count and
-    // calculate the new number of words the user has sent
-    //
-    var messageCount = context.user.messageCount + 1;
-    var words = text.split(" ");
-    var wordCount = context.user.wordCount + words.length;
+  var context = session.getUserContext(defaults)
 
-    // Merge the new statistics into the context
-    // and return it back to the bot
-    context.user = Object.assign(context.user, {
-      messageCount: messageCount,
-      wordCount: wordCount
-    })
+  var words = message.text.split(" ")
+  var totalMessages = context.totalMessages + 1
+  var totalWords = context.totalWords + words.length
 
-    next();
-});
+  session.updateUserContext({
+   totalMessages: totalMessages,
+   totalWords: totalWords
+  })
 
-// When the user sends "/stats"
-bot.hears(['\/stats'], ['message_received'], function(bot, utterance, context) {
-    // Send the total number of messages to the
-    // user
-    bot.reply("Total Message Count: " + context.user.messageCount)
-
-    // Send the total number of words to the
-    // user
-    bot.reply("Total Word Count: " + context.user.wordCount)
-});
-
-// When the user sends anything
-bot.hears([/.+/], ['message_received'], function(bot, utterance, context) {
-  // Repeat what the user sent us
-  bot.reply(utterance.text);
-});
-
-// Spawn a bot which listens for messages via Facebook Messenger
-bot.spawn({
-  client:'messenger-bot'
+  next()
 })
+
+bot.hears(/\/stats/, function(message, session) {
+
+  var context = session.getUserContext()
+
+  session.send("Total Messages Sent: " + context.totalMessages)
+  session.send("Total Words Sent: " + context.totalWords)
+})
+
+bot.hears(/.+/, function(message, session) {
+  session.send(message.text)
+})
+
+bot.listen(process.env.PORT || 3000)
