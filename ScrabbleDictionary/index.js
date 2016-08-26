@@ -28,4 +28,4 @@ var bot = new Pozi.Bot();
 //   bot.reply(utterance.message.user, words.join(", "))
 // });
 
-module.exports = bot.router
+module.exports = Pozi.botMiddleware(bot)

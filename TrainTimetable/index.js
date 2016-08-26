@@ -51,4 +51,4 @@ var bot = new Pozi.Bot();
 //   name: 'TrainTimesBot'
 // })
 
-module.exports = bot.router
+module.exports = Pozi.botMiddleware(bot)

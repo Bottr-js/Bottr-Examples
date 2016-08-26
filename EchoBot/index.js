@@ -38,4 +38,4 @@ bot.hears(/.+/, function(message, session) {
   session.send(message.text)
 })
 
-module.exports = bot.router
+module.exports = Pozi.botMiddleware(bot)
