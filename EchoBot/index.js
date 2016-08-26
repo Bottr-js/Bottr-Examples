@@ -1,6 +1,7 @@
 var Pozi = require('pozi')
 var bot = new Pozi.Bot()
 
+bot.use(new Pozi.FacebookMessengerClient())
 bot.use(new Pozi.WebhookClient())
 bot.use(new Pozi.MemoryStorage())
 
