@@ -35,11 +35,11 @@ bot.hears(/timetable/, function(message, session) {
     return item.time + " " + item.destination
   })
 
-  message.send("The timetable for today is: \n" + rows.join("\n"))
+  session.send("The timetable for today is: \n" + rows.join("\n"))
 });
 
 bot.hears([/thanks/, /cheers/, /thank you/, /ta/, /thx/, /ty/], function(message, session) {
   session.send("No problem!")
 });
 
-module.exports = Pozi.botMiddleware(bot)
+module.exports = bot

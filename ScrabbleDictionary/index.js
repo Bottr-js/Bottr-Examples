@@ -29,4 +29,4 @@ bot.on('message_received', function(message, session) {
   session.send(words.join(", "))
 });
 
-module.exports = Pozi.botMiddleware(bot)
+module.exports = bot

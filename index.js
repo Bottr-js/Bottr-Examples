@@ -1,10 +1,16 @@
-var Express = require('express')
-var app = Express()
+var Pozi = require('pozi')
 
-app.use('/echobot', require('./EchoBot')) // Start EchoBot Example
-app.use('/train-timetable', require('./TrainTimetable')) // Start Train Timetable Example
-app.use('/scrabble-dictionary', require('./ScrabbleDictionary')) // Start Scrabble Dictionary Example
+var server = new Pozi.Server()
+
+// Start EchoBot Example
+server.use('/echobot', require('./EchoBot'))
+
+// Start Train Timetable Example
+server.use('/train-timetable', require('./TrainTimetable'))
+
+// Start Scrabble Dictionary Example
+server.use('/scrabble-dictionary', require('./ScrabbleDictionary'))
 
 var port = process.env.PORT || 3000
 console.log('Examples listening on port ' + port)
-app.listen(port)
+server.listen(port)
