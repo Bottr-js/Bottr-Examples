@@ -2,8 +2,6 @@ var Pozi = require('pozi')
 var fs = require('fs');
 var bot = new Pozi.Bot();
 
-// Twillio
-
 var contents = fs.readFileSync(__dirname + '/words.csv', 'utf8');
 var dictionary = contents.split('\n').filter(function(word){
   return word.length > 1 && /^[a-zA-Z]+$/.test(word)
