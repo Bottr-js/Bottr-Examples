@@ -2,7 +2,6 @@ var Pozi = require('pozi')
 var fs = require('fs');
 var bot = new Pozi.Bot();
 
-bot.use(new Pozi.TwitterClient())
 // Twillio
 
 var contents = fs.readFileSync(__dirname + '/words.csv', 'utf8');

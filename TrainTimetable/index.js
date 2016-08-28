@@ -1,7 +1,9 @@
 var Pozi = require('pozi')
 var bot = new Pozi.Bot();
 
-// - Use Twitter
+bot.use(new Pozi.TwitterClient())
+// Twillio
+
 var timetable = [
   {
     time: "7:00",
