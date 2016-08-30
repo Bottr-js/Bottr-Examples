@@ -1,7 +1,7 @@
 var Pozi = require('pozi')
 var bot = new Pozi.Bot('TrainTimesBot');
 
-bot.use(new Pozi.TwillioClient())
+bot.use(new Pozi.TwilioClient())
 bot.use(new Pozi.TwitterClient())
 
 var timetable = [
