@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/BotKit-js/examples#readme",
   "dependencies": {
-    "express": "^4.14.0",
-    "pozi": "^0.2.7"
+    "pozi": "^0.2.8"
   }
 }
