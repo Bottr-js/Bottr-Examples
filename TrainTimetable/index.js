@@ -31,7 +31,7 @@ var timetable = [
   }
 ]
 
-bot.hears(/timetable/, function(message, session) {
+bot.hears(/timetable/i, function(message, session) {
 
   var rows = timetable.map(function(item){
     return item.time + " " + item.destination
@@ -40,7 +40,7 @@ bot.hears(/timetable/, function(message, session) {
   session.send("The timetable for today is: \n" + rows.join("\n"))
 });
 
-bot.hears([/thanks/, /cheers/, /thank you/, /ta/, /thx/, /ty/], function(message, session) {
+bot.hears([/thanks/i, /cheers/i, /thank you/i, /ta/i, /thx/i, /ty/i], function(message, session) {
   session.send("No problem!")
 });
 

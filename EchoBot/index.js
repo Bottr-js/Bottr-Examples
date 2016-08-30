@@ -26,7 +26,7 @@ bot.on('message_received', function(message, session, next) {
  next()
 });
 
-bot.hears(/\/stats/, function(message, session) {
+bot.hears(/\/stats/i, function(message, session) {
 
  var context = session.getUserContext()
 
