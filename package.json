@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bottr-js/examples.git"
+    "url": "git+https://github.com/Bottr-js/Bottr-Examples.git"
   },
   "author": "jcampbell_05",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bottr-js/examples/issues"
+    "url": "https://github.com/Bottr-js/Bottr-Examples/issues"
   },
-  "homepage": "https://github.com/Bottr-js/examples#readme",
+  "homepage": "https://github.com/Bottr-js/Bottr-Examples#readme",
   "dependencies": {
-    "pozi": "^0.1.0"
+    "bottr": "^0.1.0"
   }
 }
