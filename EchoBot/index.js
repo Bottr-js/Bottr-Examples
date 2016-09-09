@@ -1,9 +1,9 @@
-var Pozi = require('pozi')
+var Bottr = require('bottr')
 var fs = require('fs');
-var bot = new Pozi.Bot();
+var bot = new Bottr.Bot();
 
-bot.use(new Pozi.FacebookMessengerClient())
-bot.use(new Pozi.MemoryStorage())
+bot.use(new Bottr.FacebookMessengerClient())
+bot.use(new Bottr.MemoryStorage())
 
 bot.on('message_received', function(message, session, next) {
 

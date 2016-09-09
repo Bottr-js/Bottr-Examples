@@ -1,6 +1,6 @@
-var Pozi = require('pozi')
+var Bottr = require('bottr')
 var fs = require('fs');
-var bot = new Pozi.Bot();
+var bot = new Bottr.Bot();
 
 var contents = fs.readFileSync(__dirname + '/words.csv', 'utf8');
 var dictionary = contents.split('\n').filter(function(word){
