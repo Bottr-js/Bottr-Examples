@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BotKit-js/examples.git"
+    "url": "git+https://github.com/Bottr-js/examples.git"
   },
   "author": "jcampbell_05",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BotKit-js/examples/issues"
+    "url": "https://github.com/Bottr-js/examples/issues"
   },
-  "homepage": "https://github.com/BotKit-js/examples#readme",
+  "homepage": "https://github.com/Bottr-js/examples#readme",
   "dependencies": {
-    "pozi": "^0.2.15"
+    "pozi": "^0.1.0"
   }
 }
