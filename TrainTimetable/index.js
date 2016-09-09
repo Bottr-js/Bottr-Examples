@@ -1,9 +1,6 @@
 var Bottr = require('bottr')
 var bot = new Bottr.Bot('TrainTimesBot');
 
-bot.use(new Bottr.TwilioClient())
-bot.use(new Bottr.TwitterClient())
-
 var timetable = [
   {
     time: "7:00",
