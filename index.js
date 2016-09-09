@@ -1,6 +1,6 @@
-var Pozi = require('pozi')
+var Bottr = require('bottr')
 
-var server = new Pozi.Server()
+var server = new Bottr.Server()
 
 // Start EchoBot Example
 server.use('/echobot', require('./EchoBot'))
